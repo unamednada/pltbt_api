@@ -1,4 +1,4 @@
-from mongo_client import client
+from api.db.mongo_client import client
 import json
 
 
