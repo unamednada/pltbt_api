@@ -13,3 +13,15 @@ def dim_return():
       '/home/unamednada/politbot/pltbt_api/api/files/dim.json')
     return jsonify(
       [{'nome': d['Nome'], 'twitter': d['Twitter']} for d in full_dim])
+
+
+def fatovalores_return():
+    full_fatovalores = read_json(
+      '/home/unamednada/politbot/pltbt_api/api/files/fatovalores.json')
+    return jsonify(
+      [{
+        'nome': f['nomeParlamentar'],
+        'valor': f['valorLiquido'],
+        'mes': f['mes'],
+        'ano': f['ano']
+      } for f in full_fatovalores['dados']])

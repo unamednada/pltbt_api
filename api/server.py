@@ -1,6 +1,6 @@
-from flask import Flask, send_file
+from flask import Flask
 
-from api.utils.service import dim_return
+from api.utils.service import dim_return, fatovalores_return
 
 
 app = Flask(__name__)
@@ -18,4 +18,4 @@ def dim():
 
 @app.route('/api/fatovalores')
 def fatovalores():
-    return send_file('./files/fatovalores.json', mimetype='application/json')
+    return fatovalores_return()
